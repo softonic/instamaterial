@@ -1,0 +1,128 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.comments.CommentsActivity"
+    >
+
+  <LinearLayout
+      android:id="@+id/contentRoot"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/bg_comments"
+      android:orientation="vertical"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/rvComments"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scrollbars="none"
+          />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="4dp"
+          android:layout_gravity="bottom"
+          android:background="@drawable/shadow_top"
+          />
+
+      <LinearLayout
+          android:id="@+id/llNoComments"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:padding="32dp"
+          android:visibility="gone"
+          >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_comments"
+            android:textSize="18sp"
+            />
+
+      </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llAddComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/bg_comments"
+        android:elevation="8dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        >
+
+      <EditText
+          android:id="@+id/etComment"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textColor="#555555"
+          android:textSize="14sp"
+          />
+
+      <com.softonic.instamaterial.ui.view.SendCommentButton
+          android:id="@+id/btnSendComment"
+          android:layout_width="72dp"
+          android:layout_height="match_parent"
+          android:layout_marginBottom="2dp"
+          android:layout_marginLeft="8dp"
+          android:background="@drawable/btn_send_comment"
+          android:orientation="vertical"
+          />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <android.support.design.widget.AppBarLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+    <include
+        layout="@layout/view_feed_toolbar"
+        />
+
+  </android.support.design.widget.AppBarLayout>
+
+
+  <FrameLayout
+      android:id="@+id/flUploading"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#a0000000"
+      android:visibility="gone"
+      android:clickable="true"
+      >
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="@dimen/size_huge"
+        android:layout_height="@dimen/size_huge"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_huge"
+        style="?attr/indeterminateProgressStyle"
+        />
+
+  </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

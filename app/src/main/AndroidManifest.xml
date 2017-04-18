@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.softonic.instamaterial">
+
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+  <uses-feature
+      android:name="android.hardware.camera"
+      android:required="true"/>
+  <uses-feature
+      android:name="android.hardware.camera.front"
+      android:required="false"/>
+  <uses-feature
+      android:name="android.hardware.camera.autofocus"
+      android:required="false"/>
+
+  <application
+      android:name=".InstaMaterialApplication"
+      android:icon="@drawable/ic_launcher"
+      android:label="@string/app_name"
+      android:theme="@style/AppTheme">
+    <activity
+        android:name=".ui.activity.main.MainActivity"
+        android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ui.activity.comments.CommentsActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.TransparentActivity"/>
+    <activity
+        android:name=".ui.activity.TakePhotoActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.TransparentActivity"/>
+    <activity
+        android:name=".ui.activity.publish.PublishActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.WhiteActivity"
+        android:windowSoftInputMode="stateHidden">
+    </activity>
+
+    <service
+        android:name=".ui.activity.main.likesListener.LikesListenerService"
+        android:enabled="true"
+        android:exported="false">
+    </service>
+
+    <receiver
+        android:name=".ui.activity.main.likesListener.LikesReceiver"
+        android:enabled="true"
+        android:exported="false">
+    </receiver>
+
+    <service
+        android:name=".ui.activity.main.photoListener.PhotoListenerService"
+        android:enabled="true"
+        android:exported="false">
+    </service>
+
+    <receiver
+        android:name=".ui.activity.main.photoListener.PhotoReceiver"
+        android:enabled="true"
+        android:exported="false">
+    </receiver>
+
+    <service
+        android:name=".ui.activity.comments.commentsListener.CommentsListenerService"
+        android:enabled="true"
+        android:exported="false">
+    </service>
+
+    <receiver
+        android:name=".ui.activity.comments.commentsListener.CommentsReceiver"
+        android:enabled="true"
+        android:exported="false">
+    </receiver>
+  </application>
+
+</manifest>

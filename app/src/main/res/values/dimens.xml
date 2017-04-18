@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--dimens.xml-->
+<resources>
+  <dimen name="btn_fab_size">56dp</dimen>
+  <dimen name="btn_fab_margins">16dp</dimen>
+  <dimen name="default_elevation">8dp</dimen>
+  <dimen name="comment_avatar_size">56dp</dimen>
+  <dimen name="global_menu_avatar_size">64dp</dimen>
+  <dimen name="publish_photo_thumbnail_size">96dp</dimen>
+
+  <!-- Standard margin sizes -->
+  <dimen name="margin_huge">64dp</dimen>
+  <dimen name="margin_big">32dp</dimen>
+  <dimen name="margin_tall">16dp</dimen>
+  <dimen name="margin_regular">8dp</dimen>
+  <dimen name="margin_short">4dp</dimen>
+  <dimen name="margin_small">2dp</dimen>
+  <dimen name="margin_tiny">1dp</dimen>
+
+  <!-- Standard width/height sizes -->
+  <dimen name="size_huge">72dp</dimen>
+  <dimen name="size_big">64dp</dimen>
+  <dimen name="size_tall">56dp</dimen>
+  <dimen name="size_regular">48dp</dimen>
+  <dimen name="size_short">36dp</dimen>
+  <dimen name="size_small">24dp</dimen>
+  <dimen name="size_tiny">12dp</dimen>
+</resources>

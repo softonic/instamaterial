@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <com.softonic.instamaterial.ui.view.RevealBackgroundView
+      android:id="@+id/vRevealBackground"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+        android:id="@+id/vUpperPanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#111111"
+        android:gravity="center_vertical"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        >
+
+      <ImageButton
+          android:id="@+id/btnCancel"
+          android:layout_width="48dp"
+          android:layout_height="48dp"
+          android:background="@drawable/btn_default_light"
+          android:src="@drawable/ic_close_white_24dp"
+          />
+
+    </LinearLayout>
+
+    <com.softonic.instamaterial.ui.view.SquaredFrameLayout
+        android:id="@+id/vPhotoRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+      <com.commonsware.cwac.camera.CameraView
+          android:id="@+id/cameraView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_gravity="center_vertical"
+          />
+
+      <ImageButton
+          android:id="@+id/ivTakenPhoto"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@android:color/transparent"
+          android:scaleType="centerCrop"
+          android:visibility="gone"
+          />
+
+      <View
+          android:id="@+id/vShutter"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#ffffff"
+          android:visibility="gone"
+          />
+
+    </com.softonic.instamaterial.ui.view.SquaredFrameLayout>
+
+    <FrameLayout
+        android:id="@+id/vLowerPanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+      <Button
+          android:id="@+id/btnTakePhoto"
+          android:layout_width="64dp"
+          android:layout_height="64dp"
+          android:layout_gravity="center"
+          android:background="@drawable/btn_capture"
+          />
+    </FrameLayout>
+
+  </LinearLayout>
+
+</FrameLayout>
