@@ -1,8 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- styles.xml-->
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-    </style>
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/style_color_primary</item>
+    <item name="colorPrimaryDark">@color/style_color_primary_dark</item>
+    <item name="colorAccent">@color/style_color_accent</item>
+    <item name="colorControlHighlight">@color/fab_color_pressed</item>
+  </style>
+
+  <style name="AppTheme.WhiteActivity">
+    <item name="android:windowBackground">@android:color/white</item>
+  </style>
+
+  <style name="AppTheme.TransparentActivity">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowIsTranslucent">true</item>
+  </style>
+
+  <style name="AppTheme.TransparentActivity.FullScreen">
+    <item name="android:windowFullscreen">true</item>
+  </style>
 
 </resources>

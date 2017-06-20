@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+  <string name="app_name">InstaMaterial</string>
+  <plurals name="likes_count">
+    <item quantity="one">%d like</item>
+    <item quantity="other">%d likes</item>
+  </plurals>
+  <string name="publish">PUBLISH</string>
+  <string name="publish_comment">Add a comment here</string>
+  <string name="no_elements">There isn\'t still any element!</string>
+  <string name="no_comments">There isn\'t still any comment!</string>
+  <string name="feed_cannot_log_in">Cannot log in.</string>
+  <string name="feed_cannot_send_action">Cannot send action.</string>
+  <string name="feed_cannot_request_elements">Cannot request elements.</string>
+  <string name="feed_error_updating_feed">Error updating feed.</string>
+  <string name="user_not_logged">User should be logged in</string>
+  <string name="comments_cannot_request_comments">Cannot request comments.</string>
+  <string name="comments_cannot_publish_comment">Cannot publish comment.</string>
+  <string name="photos_cannot_publish_photo">Cannot publish photo.</string>
+  <string name="action_retry">Retry</string>
 
-    <string name="app_name">InstaMaterial</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+  <string name="login_disclaimer">Enjoy InstaMaterial right now!</string>
 
+  <string name="menu_logout">Logout</string>
 </resources>

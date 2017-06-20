@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/default_elevation"
+        >
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:src="@drawable/img_toolbar_logo"
+          android:text="@string/publish"
+          android:textColor="#333333"
+          android:textSize="18sp"
+          />
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="12dp"
+        card_view:cardCornerRadius="4dp"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:paddingBottom="32dp"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:paddingTop="16dp"
+          >
+
+        <ImageView
+            android:id="@+id/ivPhoto"
+            android:layout_width="@dimen/publish_photo_thumbnail_size"
+            android:layout_height="@dimen/publish_photo_thumbnail_size"
+            android:layout_marginRight="16dp"
+            android:background="#eeeeee"
+            />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="0dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:hint="@string/publish_comment"
+            android:inputType="textAutoComplete"
+            android:lines="3"
+            android:padding="8dp"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            />
+
+      </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+  </LinearLayout>
+
+  <FrameLayout
+      android:id="@+id/flUploading"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#a0000000"
+      android:clickable="true"
+      android:visibility="gone"
+      >
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="@dimen/size_huge"
+        android:layout_height="@dimen/size_huge"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_huge"
+        style="?attr/indeterminateProgressStyle"
+        />
+
+  </FrameLayout>
+
+</RelativeLayout>

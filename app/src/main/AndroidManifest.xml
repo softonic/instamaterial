@@ -1,21 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.github.froger.instamaterial" >
+    package="com.softonic.instamaterial">
 
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name="io.github.froger.instamaterial.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+  <uses-feature
+      android:name="android.hardware.camera"
+      android:required="true"/>
+  <uses-feature
+      android:name="android.hardware.camera.front"
+      android:required="false"/>
+  <uses-feature
+      android:name="android.hardware.camera.autofocus"
+      android:required="false"/>
+
+  <application
+      android:name=".InstaMaterialApplication"
+      android:icon="@drawable/ic_launcher"
+      android:label="@string/app_name"
+      android:theme="@style/AppTheme">
+    <activity
+        android:name=".ui.activity.main.MainActivity"
+        android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ui.activity.comments.CommentsActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.TransparentActivity"/>
+    <activity
+        android:name=".ui.activity.TakePhotoActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.TransparentActivity"/>
+    <activity
+        android:name=".ui.activity.publish.PublishActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.WhiteActivity"
+        android:windowSoftInputMode="stateHidden"/>
+    <activity
+        android:name=".ui.activity.login.LoginActivity"
+        android:screenOrientation="portrait"/>
+
+  </application>
 
 </manifest>
